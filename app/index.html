@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Log — GTA VI Trophy Guide &amp; Tracker (55 PS5 trophies)</title>
+<meta name="description" content="Offline tracker and original guide for all 55 official Grand Theft Auto VI trophies on PlayStation 5: checklist, roadmap to platinum, missable flags, sources cited.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Official 55-trophy list, 18 Nov 2026</p>
+  <h1>Leonida Platinum Log</h1>
+  <p class="sub">A free, offline trophy guide &amp; tracker. Tick trophies off as you earn them — progress lives in your browser, never leaves your device.</p>
+  <div class="audit" id="audit" aria-label="Audit strip"></div>
+  <div class="progress-wrap" aria-label="Overall progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="progress-text" id="progressText">0 of 55 earned</p>
+  </div>
+  <nav class="tabs" aria-label="Views">
+    <button type="button" data-view="tracker" class="tab active">Tracker</button>
+    <button type="button" data-view="roadmap" class="tab">Roadmap to Platinum</button>
+    <button type="button" data-view="missables" class="tab">Missables</button>
+    <button type="button" data-view="sources" class="tab">Sources</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="controls">
+      <label class="ctl">Search <input id="q" type="search" placeholder="Trophy name or word…" autocomplete="off"></label>
+      <label class="ctl">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="ctl">Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story missions</option>
+          <option value="activities">Activities &amp; skills</option>
+          <option value="collectibles">Collectibles &amp; exploration</option>
+          <option value="combat">Combat &amp; heists</option>
+          <option value="money">Money &amp; world</option>
+          <option value="world">Choices &amp; oddities</option>
+        </select>
+      </label>
+      <label class="ctl">Status
+        <select id="status">
+          <option value="all">All</option>
+          <option value="earned">Earned</option>
+          <option value="todo">Not yet earned</option>
+        </select>
+      </label>
+      <label class="ctl check"><input id="spoilers" type="checkbox" checked> Hide story spoilers until earned</label>
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+      <button id="reset" type="button" class="danger">Reset</button>
+    </div>
+    <p class="hint" id="countLine"></p>
+    <p class="import-msg" id="importMsg" role="status"></p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="lede">Work the phases in order. Story trophies cannot be missed — play the plot and they land. The only things that need care are the five flagged missables (see the Missables tab) and the long grinds, which are cumulative: chip at them between missions instead of leaving them all for the end.</p>
+    <ol class="phases" id="phases"></ol>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2>Missable trophies — flagged from the official descriptions</h2>
+    <p class="lede">Five trophies are flagged <strong>possibly missable</strong>. The flag is a caution drawn from the wording of the official description (a one-time choice, a second-chance moment, a one-off event, or a partner / location that the story may take away). It is <strong>not</strong> a confirmed missable: the game is days old and no public guide is complete. Before you finish the story, check the cited guides in the Sources tab for the latest word on each flag — and do the flagged ones early, while the moment is still in front of you.</p>
+    <div class="cards" id="missableCards"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <h2>Sources &amp; method</h2>
+    <p class="lede">Every trophy name, description and grade on this page comes from the official 55-trophy list for Grand Theft Auto VI on PlayStation 5 (list dated 18 Nov 2026, shipped with this app as <code>data/trophies.json</code>). Every guide below it is written in this app's own words from that official description — what to do, where, how, and when it can be missed. No text was copied from another guide, and no Rockstar logo or official artwork is used anywhere in this app.</p>
+    <h3>Further reading — public guides consulted by name</h3>
+    <ul class="sources">
+      <li><strong>PowerPyx</strong> — GTA 6 Trophy Guide (powerpyx.com)</li>
+      <li><strong>PlayStationTrophies.org</strong> — GTA VI trophy list &amp; guides</li>
+      <li><strong>PSNProfiles</strong> — GTA VI trophy list &amp; community guides</li>
+      <li><strong>TrueTrophies</strong> — GTA VI trophy list &amp; guides</li>
+      <li><strong>Exophase</strong> — GTA VI trophy list</li>
+    </ul>
+    <p class="lede">If a guide here and a cited guide disagree — especially on the missable flags — trust the cited guide: it is written by people who have played the moment. This app is offline and free: no account, no network, no ads. Your checklist is stored only in this browser (<code>localStorage</code>); export it to a file to move it to another browser.</p>
+    <h3>Counts</h3>
+    <ul class="sources" id="sourceCounts"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Platinum Log — an unofficial, fan-made tracker. Grand Theft Auto and Rockstar are trademarks of their owners; this app is not affiliated with or endorsed by them. MIT licensed; source in this repository.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
